@@ -1,0 +1,6 @@
+{
+  "src/markup": {
+    "watch": true,
+    "autoescape": true
+  }
+}

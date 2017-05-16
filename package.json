@@ -1,0 +1,41 @@
+{
+  "name": "Static Site Boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://kschiffer@github.com/kschiffer/kevinschiffer.com.git",
+  "author": "Kevin Schiffer <mail@kevinschiffer.de>",
+  "license": "GPL",
+  "scripts": {
+    "start": "yarn run server & yarn run nunjucks & yarn run webpack",
+    "dev": "yarn run server & yarn run nunjucks & yarn run webpack & yarn run livereload & open http://localhost:8000",
+    "webpack": "webpack --watch",
+    "livereload": "livereload ./dist",
+    "nunjucks": "nunjucks **/*.tpl -O nunjucks.config.json -o dist -p src/markup -w",
+    "build": "NODE_ENV=production webpack -p",
+    "server": "pushd ./dist; python -m SimpleHTTPServer 8000; popd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "jquery": "^3.2.1",
+    "jshint": "^2.9.4",
+    "jshint-loader": "^0.8.4",
+    "node-sass": "^4.5.2",
+    "nunjucks-cli": "^0.5.1",
+    "postcss-csso": "^2.0.0",
+    "postcss-loader": "^1.3.3",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.4.1",
+    "webpack-notifier": "^1.5.0"
+  },
+  "devDependencies": {
+    "file-loader": "^0.11.1",
+    "livereload": "^0.6.2",
+    "webpack-livereload-plugin": "^0.11.0"
+  }
+}
