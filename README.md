@@ -3,8 +3,9 @@ A minimalist boilerplate for static sites, using nunjucks for templating, sass a
 
 Use with:
 
-`yarn`
+`yarn` and
 
 `yarn run dev`
   
+
 Have fun :)
